@@ -171,6 +171,7 @@ class PortalLollypopService(Server, Gio.Application):
         for tag_editor in [favorite] + TAG_EDITORS:
             if GLib.find_program_in_path(tag_editor) is not None:
                 editor = tag_editor
+                break
         if editor is not None:
             argv = [editor, f, None]
             GLib.spawn_sync(None, argv, None,
