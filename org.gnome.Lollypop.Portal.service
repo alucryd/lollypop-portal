@@ -1,3 +1,0 @@
-[D-BUS Service]
-Name=org.gnome.Lollypop.Portal
-Exec=/usr/local/share/lollypop/lollypop-portal
