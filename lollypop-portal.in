@@ -18,11 +18,6 @@ sys.path.insert(1, '@pyexecdir@')
 sys.path.insert(1, '@pythondir@')
 
 import gi
-gi.require_version('Secret', '1')
-gi.require_version('TotemPlParser', '1.0')
-gi.require_version('GstPbutils', '1.0')
-gi.require_version('Gtk', '3.0')
-gi.require_version('Gdk', '3.0')
 gi.require_version('Gst', '1.0')
 from gi.repository import Gio, Gst, GLib
 
