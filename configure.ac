@@ -2,7 +2,7 @@ AC_PREREQ(2.63)
 AC_INIT([lollypop-portal],
         [0.9.0],
         [https://github.com/gnumdk/lollypop-portal],
-        [lollypop],
+        [lollypop-portal],
         [https://github.com/gnumdk/lollypop-portal])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_SRCDIR([Makefile.am])
