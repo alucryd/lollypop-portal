@@ -173,7 +173,7 @@ class PortalLollypopService(Server, Gio.Application):
                             GLib.SpawnFlags.SEARCH_PATH, None)
 
     def SetPopularity(self, pop, f):
-        argv = ["kid3-cli", "-c", "set pop: %s" % pop, f, None]
+        argv = ["kid3-cli", "-c", "set POPM %s" % pop, f, None]
         GLib.spawn_sync(None, argv, None,
                         GLib.SpawnFlags.SEARCH_PATH, None)
 
