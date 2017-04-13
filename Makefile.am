@@ -36,21 +36,16 @@ servicedir = $(datadir)/dbus-1/services
 service_DATA = $(service_in_files:.service.in=.service)
 service_in_files = org.gnome.Lollypop.Portal.service.in
 
-
-appdatadir = $(pkgdatadir)
-appdata_DATA = lollypop-portal
+libexec_SCRIPTS = lollypop-portal
 
 EXTRA_DIST = \
         org.gnome.Lollypop.Portal.service.in\
         lollypop-portal.in\
-	$(appdata_DATA)\
+        $(libexec_SCRIPTS)\
 	$(service_DATA)
 
 CLEANFILES = \
-    $(appdata_DATA)\
-	$(service_DATA)
-
-install-data-hook:
-	test -f $(pkgdatadir)/$(appdata_DATA) && chmod +x $(pkgdatadir)/$(appdata_DATA); exit 0
+    $(libexec_SCRIPTS)\
+    $(service_DATA)
 
 -include $(top_srcdir)/git.mk
