@@ -4,7 +4,6 @@ project('lollypop-portal',
 )
 i18n = import('i18n')
 python = import('python3')
-project_id = 'org.gnome.Lollypop'
 
 message('Looking for dependencies')
 dependency('python3')
