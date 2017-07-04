@@ -79,3 +79,5 @@ lollypop
 /flatpak/*.bundle
 /flatpak/*.flatpak
 /flatpak/.flatpak-builder
+builddir/
+.vscode/
