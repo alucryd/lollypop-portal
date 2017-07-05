@@ -2,7 +2,6 @@ project('lollypop-portal',
   version: '0.9.1',
   meson_version: '>= 0.40.0'
 )
-i18n = import('i18n')
 python = import('python3')
 
 message('Looking for dependencies')
@@ -11,7 +10,7 @@ dependency('gobject-introspection-1.0', version: '>=1.35.9')
 dependency('gtk+-3.0', version :'>=3.14')
 
 python_dir = join_paths(get_option('prefix'), python.sysconfig_path('purelib'))
-service_dir = join_paths(get_option('prefix'), 'dbus-1', 'services')
+service_dir = join_paths(get_option('datadir'), 'dbus-1', 'services')
 libexec_dir = join_paths(get_option('prefix'), 'libexec')
 
 conf = configuration_data()
@@ -34,3 +33,5 @@ configure_file(
   configuration: conf,
   install_dir: service_dir
 )
+
+meson.add_install_script('meson_post_install.py')
