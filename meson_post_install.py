@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-from compileall import compile_dir
 from os import environ, path
 from subprocess import call
 
