@@ -11,7 +11,7 @@ dependency('gtk+-3.0', version :'>=3.14')
 
 python_dir = join_paths(get_option('prefix'), python.sysconfig_path('purelib'))
 service_dir = join_paths(get_option('datadir'), 'dbus-1', 'services')
-libexec_dir = join_paths(get_option('prefix'), 'libexec')
+libexec_dir = join_paths(get_option('prefix'), get_option('libexecdir'))
 
 conf = configuration_data()
 conf.set('pythondir', python_dir)
